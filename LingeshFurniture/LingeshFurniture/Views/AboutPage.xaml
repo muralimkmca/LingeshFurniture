@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LingeshFurniture.Views.AboutPage"
+             xmlns:vm="clr-namespace:LingeshFurniture.ViewModels"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <Grid ColumnDefinitions="25*,75*" Padding="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Text="Bed"></Label>
+            <Label Grid.Row="1" Grid.Column="0" Text="Chair"></Label>
+            <Label Grid.Row="2" Grid.Column="0" Text="Table"></Label>
+            <Label Grid.Row="3" Grid.Column="0" Text="Cot"></Label>
+
+            <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="4" ColumnDefinitions="Auto,Auto" RowDefinitions="Auto,Auto">
+                <Image Grid.Row="0" Grid.Column="0" Source="image1.jpg" WidthRequest="100" HeightRequest="100" />
+                <Image Grid.Row="0" Grid.Column="1" Source="image2.jpg" WidthRequest="100" HeightRequest="100" />
+                <Image Grid.Row="1" Grid.Column="0" Source="image3.jpg" WidthRequest="100" HeightRequest="100" />
+                <Image Grid.Row="1" Grid.Column="1" Source="image4.jpg" WidthRequest="100" HeightRequest="100" />
+            </Grid>
+
+        </Grid>
+
+    </ScrollView>
+
+
+
+    <!--<ScrollView>
+        <FlexLayout Wrap="Wrap" AlignItems="Start" Padding="20">
+
+            <StackLayout Padding="10"  HorizontalOptions="FillAndExpand">
+                <ListView>
+                    <ListView.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Beds</x:String>
+                            <x:String>Chairs</x:String>
+                            <x:String>Tables</x:String>
+                            <x:String>Desks</x:String>
+                        </x:Array>
+                    </ListView.ItemsSource>
+                </ListView>
+            </StackLayout>
+            <StackLayout Padding="10"  HorizontalOptions="FillAndExpand">
+                <Grid RowDefinitions="Auto,Auto,Auto,Auto" ColumnDefinitions="240">
+                    <Label Text="Client 2"  Grid.Row="0" />
+                    <Entry Placeholder="Client 2 Name"  Grid.Row="1" />
+                    <Label Text="Address" Grid.Row="2" />
+                    <Entry Placeholder="Client 2 Address"  Grid.Row="3"/>
+                </Grid>
+            </StackLayout>
+            -->
+    <!--<StackLayout Padding="10"  HorizontalOptions="FillAndExpand">
+                <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="100">
+                    <Image Grid.Row="0" Grid.Column="0" Source="image1.jpg" WidthRequest="100" HeightRequest="100" />
+                    <Image Grid.Row="0" Grid.Column="1" Source="image2.jpg" WidthRequest="100" HeightRequest="100" />
+                    <Image Grid.Row="0" Grid.Column="2" Source="image3.jpg" WidthRequest="100" HeightRequest="100" />
+                    <Image Grid.Row="1" Grid.Column="0" Source="image4.jpg" WidthRequest="100" HeightRequest="100" />
+                    <Image Grid.Row="1" Grid.Column="0" Source="image5.jpg" WidthRequest="100" HeightRequest="100" />
+                    <Image Grid.Row="1" Grid.Column="0" Source="image6.jpg" WidthRequest="100" HeightRequest="100" />
+                </Grid>
+            </StackLayout>-->
+    <!--
+        </FlexLayout>
+    </ScrollView>-->
+    <!--<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+       
+        <BoxView Grid.Column="0" />
+        <ListView Grid.Column="0">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Beds</x:String>
+                    <x:String>Chairs</x:String>
+                    <x:String>Tables</x:String>
+                    <x:String>Desks</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+        </ListView>
+        <BoxView Grid.Column="1" />
+        <FlexLayout Grid.Column="1" Direction="Row"
+                AlignItems="Center"
+                JustifyContent="Start">
+
+            -->
+    <!--<Label Text="FlexLayout in Action"
+               FontSize="Large" />
+
+            <Image Source="{local:ImageResource FlexLayoutDemos.Images.SeatedMonkey.jpg}" />
+
+            <Button Text="Do-Nothing Button" />
+
+            <Label Text="Another Label" />-->
+    <!--
+            <Image Source="image1.jpg" WidthRequest="100" HeightRequest="100" />
+            <Image  Source="image2.jpg" WidthRequest="100" HeightRequest="100" />
+            <Image  Source="image3.jpg" WidthRequest="100" HeightRequest="100" />
+            <Image  Source="image4.jpg" WidthRequest="100" HeightRequest="100" />
+            <Image  Source="image5.jpg" WidthRequest="100" HeightRequest="100" />
+            <Image  Source="image6.jpg" WidthRequest="100" HeightRequest="100" />
+        </FlexLayout>
+
+
+
+
+
+
+
+        <BoxView Grid.Row="1"
+                 Grid.ColumnSpan="2"
+                 Color="Red" />
+
+    </Grid>-->
+    <!--<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                    <Image Source="xamarin_logo.png" VerticalOptions="Center" HeightRequest="64" />
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                <Label Text="Start developing now" FontSize="Title"/>
+                <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="0,0,0,0"/>
+                <Label FontSize="16" Padding="0,24,0,0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Learn more at "/>
+                                <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Button Margin="0,10,0,0" Text="Learn more"
+                        Command="{Binding OpenWebCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+            </StackLayout>
+        </ScrollView>
+    </Grid>-->
+
+</ContentPage>
