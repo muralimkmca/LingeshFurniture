@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LingeshFurniture.Views.AboutPage"
-             xmlns:vm="clr-namespace:LingeshFurniture.ViewModels"
+             xmlns:vm="clr-namespace:LingeshFurniture.ViewModels" xmlns:PanCake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              Title="{Binding Title}">
 
     <ContentPage.BindingContext>
@@ -15,26 +15,35 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <ScrollView>
-        <Grid ColumnDefinitions="25*,75*" Padding="15">
+    <ScrollView BackgroundColor="OrangeRed">
+        <Grid ColumnDefinitions="30*,70*" Padding="15">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="220" />
             </Grid.RowDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" Text="Bed"></Label>
-            <Label Grid.Row="1" Grid.Column="0" Text="Chair"></Label>
-            <Label Grid.Row="2" Grid.Column="0" Text="Table"></Label>
-            <Label Grid.Row="3" Grid.Column="0" Text="Cot"></Label>
+            <PanCake:PancakeView Grid.Row="0" Grid.Column="0" BackgroundColor="White" CornerRadius="10">
+                <ListView>
+                    <ListView.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Beds</x:String>
+                            <x:String>Chairs</x:String>
+                            <x:String>Tables</x:String>
+                            <x:String>Desks</x:String>
+                        </x:Array>
+                    </ListView.ItemsSource>
+                    </ListView>
+            </PanCake:PancakeView>
+            <PanCake:PancakeView Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" BackgroundColor="White" CornerRadius="10">
+                <Grid Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" ColumnDefinitions="Auto,Auto" RowDefinitions="Auto,Auto" Padding="15">
 
-            <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="4" ColumnDefinitions="Auto,Auto" RowDefinitions="Auto,Auto">
-                <Image Grid.Row="0" Grid.Column="0" Source="image1.jpg" WidthRequest="100" HeightRequest="100" />
-                <Image Grid.Row="0" Grid.Column="1" Source="image2.jpg" WidthRequest="100" HeightRequest="100" />
-                <Image Grid.Row="1" Grid.Column="0" Source="image3.jpg" WidthRequest="100" HeightRequest="100" />
-                <Image Grid.Row="1" Grid.Column="1" Source="image4.jpg" WidthRequest="100" HeightRequest="100" />
-            </Grid>
+                    <Image Grid.Row="0" Grid.Column="0" Source="image1.jpg" WidthRequest="100" HeightRequest="100" />
+                    <Image Grid.Row="0" Grid.Column="1" Source="image2.jpg" WidthRequest="100" HeightRequest="100" />
+                    <Image Grid.Row="1" Grid.Column="0" Source="image3.jpg" WidthRequest="100" HeightRequest="100" />
+                    <Image Grid.Row="1" Grid.Column="1" Source="image4.jpg" WidthRequest="100" HeightRequest="100" />
 
+                </Grid>
+            </PanCake:PancakeView>
+            <PanCake:PancakeView Grid.Row="1" Grid.ColumnSpan="2" BackgroundColor="White" CornerRadius="10">
+            </PanCake:PancakeView>
         </Grid>
 
     </ScrollView>
